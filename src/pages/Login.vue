@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-form-render :form-json="formJson" :form-data="formData" :option-data="optionData" ref="vFormRef"></v-form-render>
-    <el-button type="primary" @click="submitForm">Submit</el-button>
+    <el-button type="primary" @click="submitForm">登录</el-button>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ const formJson = reactive({
         name: 'statictext111193',
         columnWidth: '200px',
         hidden: false,
-        textContent: '单列表单',
+        textContent: '登录',
         customClass: [],
         onCreated: '',
         onMounted: '',
@@ -49,15 +49,13 @@ const formJson = reactive({
       icon: 'text-field',
       formItemFlag: true,
       options: {
-        name: 'input12931',
+        name: 'username',
         label: '用户名',
         labelAlign: 'label-center-align',
         type: 'text',
         defaultValue: '',
-        placeholder: '',
+        placeholder: '请输入用户名',
         columnWidth: '200px',
-        size: '',
-        labelWidth: '',
         labelHidden: false,
         readonly: false,
         disabled: false,
@@ -74,18 +72,9 @@ const formJson = reactive({
         minLength: 4,
         maxLength: 10,
         showWordLimit: false,
-        prefixIcon: '',
-        suffixIcon: '',
         appendButton: false,
         appendButtonDisabled: false,
         buttonIcon: 'el-icon-search',
-        onCreated: '',
-        onMounted: '',
-        onInput: '',
-        onChange: '',
-        onFocus: '',
-        onBlur: '',
-        onValidate: '',
         requiredHint: '请输入用户名',
       },
       id: 'input12931',
@@ -96,17 +85,12 @@ const formJson = reactive({
       icon: 'text-field',
       formItemFlag: true,
       options: {
-        name: 'input20992',
+        name: 'password',
         label: '密码',
-        labelAlign: '',
-        type: 'password',
-        defaultValue: '',
-        placeholder: '',
-        columnWidth: '200px',
-        size: '',
-        labelWidth: '',
+        type: 'password', columnWidth: '200px',
         labelHidden: false,
         readonly: false,
+        placeholder: '请输入密码',
         disabled: false,
         hidden: false,
         clearable: true,
@@ -114,26 +98,17 @@ const formJson = reactive({
         required: true,
         requiredHint: '请输入密码',
         validation: 'noChinese',
-        validationHint: '输入格式有误',
+        validationHint: '请输入5-10位密码',
         customClass: '',
         labelIconClass: null,
         labelIconPosition: 'rear',
         labelTooltip: null,
-        minLength: null,
-        maxLength: null,
+        minLength: 5,
+        maxLength: 10,
         showWordLimit: false,
-        prefixIcon: '',
-        suffixIcon: '',
         appendButton: false,
         appendButtonDisabled: false,
         buttonIcon: 'custom-search',
-        onCreated: '',
-        onMounted: '',
-        onInput: '',
-        onChange: '',
-        onFocus: '',
-        onBlur: '',
-        onValidate: '',
       },
       id: 'input20992',
     },
@@ -143,15 +118,12 @@ const formJson = reactive({
       icon: 'text-field',
       formItemFlag: true,
       options: {
-        name: 'input97418',
+        name: 'email',
         label: '电子邮箱',
-        labelAlign: '',
         type: 'text',
-        defaultValue: '',
-        placeholder: '',
         columnWidth: '200px',
-        size: '',
         labelWidth: null,
+        placeholder: '请输入电子邮箱',
         labelHidden: false,
         readonly: false,
         disabled: false,
@@ -162,52 +134,17 @@ const formJson = reactive({
         requiredHint: '请输入邮箱',
         validation: 'email',
         validationHint: '请输入正确的邮箱',
-        customClass: '',
         labelIconClass: null,
         labelIconPosition: 'rear',
         labelTooltip: null,
         minLength: null,
         maxLength: null,
         showWordLimit: false,
-        prefixIcon: '',
-        suffixIcon: '',
         appendButton: false,
         appendButtonDisabled: false,
         buttonIcon: 'custom-search',
-        onCreated: '',
-        onMounted: '',
-        onInput: '',
-        onChange: '',
-        onFocus: '',
-        onBlur: '',
-        onValidate: '',
       },
       id: 'input97418',
-    },
-    {
-      key: 18890,
-      type: 'button',
-      icon: 'button',
-      formItemFlag: false,
-      options: {
-        name: 'button49098',
-        label: '登录',
-        columnWidth: '200px',
-        size: '',
-        displayStyle: 'block',
-        disabled: false,
-        hidden: false,
-        type: 'primary',
-        plain: true,
-        round: false,
-        circle: false,
-        icon: null,
-        customClass: '',
-        onCreated: '',
-        onMounted: '',
-        onClick: '',
-      },
-      id: 'button49098',
     },
   ],
   formConfig: {
@@ -216,16 +153,10 @@ const formJson = reactive({
     rulesName: 'rules',
     labelWidth: 100,
     labelPosition: 'left',
-    size: '',
     labelAlign: 'label-center-align',
-    cssCode: '',
     customClass: [],
-    functions: '',
     layoutType: 'H5',
     jsonVersion: 3,
-    onFormCreated: '',
-    onFormMounted: '',
-    onFormDataChange: '',
   },
 })
 const formData = reactive({})
@@ -233,14 +164,13 @@ const optionData = reactive({})
 const vFormRef = ref(null)
 
 const submitForm = () => {
-  (vFormRef?.value! as any)
+  (vFormRef?.value as any)
     .getFormData()
     .then((formData: Record<string, any>) => {
-      // Form Validation OK
-      alert(JSON.stringify(formData))
+      console.log(JSON.stringify(formData));
+      JSON.stringify(formData)
     })
     .catch((error: string) => {
-      // Form Validation failed
       ElMessage.error(error)
     })
 }
