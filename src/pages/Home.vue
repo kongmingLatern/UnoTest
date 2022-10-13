@@ -10,5 +10,5 @@
 <script lang="ts" setup>
 import Header from '@/views/home/Header.vue';
 import Carousel from '@/views/home/Carousel.vue'
-import Cardfrom '@/views/home/Card.vue'
+import Card from '@/views/home/Card.vue'
 </script>
