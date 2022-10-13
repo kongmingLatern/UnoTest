@@ -1,12 +1,12 @@
 <template>
-  <div class=" sm:flex sm:justify-around">
+  <div class="flex justify-between flex-wrap count">
     <el-col v-for="o in 5" :key="o">
-      <el-card :body-style="{ padding: '10px' }" class="sm:w-1/3">
+      <el-card>
         <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
           class="image" />
         <div>
           <span>Yummy hamburger</span>
-          <div class="bottom">
+          <div class="button">
             <time class="time">{{ currentDate }}</time>
             <el-button text class="button">Operating</el-button>
           </div>
@@ -25,6 +25,25 @@ const currentDate = ref(new Date())
 <style scoped>
 :deep(.el-row) {
   flex-wrap: unset;
+}
+
+@media only screen and (max-width: 375px) {
+  :deep(.el-col-24) {
+    flex: 1 0 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :deep(.el-col-24) {
+    flex: 1 0 33%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  :deep(.el-col-24) {
+    flex: 1 0 25%;
+  }
+
 }
 
 .time {
