@@ -21,7 +21,14 @@ export default defineConfig({
         presetIcons({ scale: 1.5 })
       ],
       shortcuts: [
-        ['icon-btn', 'text-16 inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-primary !outline-none']
+        ['icon-btn', 'text-16 inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-primary !outline-none'],
+        ['j-c-c', 'justify-center'],
+        ['j-c-b', 'justify-between'],
+        ['j-c-a', 'justify-around'],
+        ['a-i-b', 'items-baseline'],
+        ['a-i-c', 'items-center'],
+        ['f-c-c', 'flex justify-center items-center'],
+        ['f-b-c', 'flex justify-between items-center'],
       ],
       rules: [
         ['/^bg-(/\d+)$/', { background: '$1' }],

@@ -1,7 +1,7 @@
 <template>
-  <header p-10 flex="~" justify-between items-center dark:bg-gray-800 dark:text-gray-100>
+  <header p-10 f-b-c dark:bg-gray-800 dark:text-gray-100>
     <div>
-      <div flex="~" items-center>
+      <div flex="~" a-i-c>
         <div i-logos:vue mr-10 />
         <span text-lg>信息查询平台</span>
       </div>
