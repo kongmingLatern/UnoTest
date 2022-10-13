@@ -6,8 +6,11 @@
         <span text-lg>信息查询平台</span>
       </div>
     </div>
-    <div @click="toggle()">
-      <div i-bi:moon-stars dark:i-bxs:sun cursor-pointer />
+    <div flex a-i-c>
+      <div i-bi:moon-stars dark:i-bxs:sun cursor-pointer @click="toggle()" />
+      <el-button ml-5 w-40 plain sm:text-sm lg:text-lg @click="$router.push('/login')">
+        登录
+      </el-button>
     </div>
   </header>
 </template>
