@@ -1,9 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/mdi': ^1.1.33
   '@iconify/json': ^2.1.120
   '@rushstack/eslint-patch': ^1.1.4
   '@types/node': ^16.11.56
+  '@unocss/preset-icons': ^0.45.29
   '@vitejs/plugin-vue': ^3.0.3
   '@vue/eslint-config-prettier': ^7.0.0
   '@vue/eslint-config-typescript': ^11.0.0
@@ -18,6 +20,7 @@ specifiers:
   unocss: ^0.45.29
   unplugin-auto-import: ^0.11.2
   unplugin-element-plus: ^0.4.1
+  unplugin-icons: ^0.14.11
   unplugin-vue-components: ^0.22.8
   vite: ^3.0.9
   vue: ^3.2.38
@@ -30,9 +33,11 @@ dependencies:
   vue-router: registry.npmmirror.com/vue-router/4.1.5_vue@3.2.40
 
 devDependencies:
+  '@iconify-json/mdi': registry.npmmirror.com/@iconify-json/mdi/1.1.33
   '@iconify/json': registry.npmmirror.com/@iconify/json/2.1.120
   '@rushstack/eslint-patch': registry.npmmirror.com/@rushstack/eslint-patch/1.2.0
   '@types/node': registry.npmmirror.com/@types/node/16.11.65
+  '@unocss/preset-icons': registry.npmmirror.com/@unocss/preset-icons/0.45.29
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.1.2_vite@3.1.7+vue@3.2.40
   '@vue/eslint-config-prettier': registry.npmmirror.com/@vue/eslint-config-prettier/7.0.0_znq2sm4m5bonjw4qqm6mwhbe2q
   '@vue/eslint-config-typescript': registry.npmmirror.com/@vue/eslint-config-typescript/11.0.2_bdxbbxtuayd4lgflbnh77t3rcm
@@ -46,6 +51,7 @@ devDependencies:
   unocss: registry.npmmirror.com/unocss/0.45.29_vite@3.1.7
   unplugin-auto-import: registry.npmmirror.com/unplugin-auto-import/0.11.2_@vueuse+core@9.3.0
   unplugin-element-plus: registry.npmmirror.com/unplugin-element-plus/0.4.1_vite@3.1.7
+  unplugin-icons: registry.npmmirror.com/unplugin-icons/0.14.11
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.22.8_vue@3.2.40
   vite: registry.npmmirror.com/vite/3.1.7
   vue-tsc: registry.npmmirror.com/vue-tsc/0.40.13_typescript@4.7.4
@@ -205,6 +211,14 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==, registry: https://r.npm.taobao.org/, tarball: https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz}
     name: '@humanwhocodes/object-schema'
     version: 1.2.1
+    dev: true
+
+  registry.npmmirror.com/@iconify-json/mdi/1.1.33:
+    resolution: {integrity: sha512-P8zIjwYvQ6SsmHc02O4oNV3jsqbL4bXcfKSt9MfCPMBvF9CLzz6QHMzQgt/Okgsb8wfhkfSQeREp+dSxV9pLRA==, registry: https://r.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify-json/mdi/-/mdi-1.1.33.tgz}
+    name: '@iconify-json/mdi'
+    version: 1.1.33
+    dependencies:
+      '@iconify/types': registry.npmmirror.com/@iconify/types/2.0.0
     dev: true
 
   registry.npmmirror.com/@iconify/json/2.1.120:
@@ -3534,6 +3548,36 @@ packages:
       - rollup
       - vite
       - webpack
+    dev: true
+
+  registry.npmmirror.com/unplugin-icons/0.14.11:
+    resolution: {integrity: sha512-szr6QA1ILT4RrJCmtvW41m2KPwUCCIx8QNgwEmTehvzEkSLDrdEaBhKGMWb/qTe5/zwnfwrDGcFT/6pGOSHJcA==, registry: https://r.npm.taobao.org/, tarball: https://registry.npmmirror.com/unplugin-icons/-/unplugin-icons-0.14.11.tgz}
+    name: unplugin-icons
+    version: 0.14.11
+    peerDependencies:
+      '@svgr/core': '>=5.5.0'
+      '@vue/compiler-sfc': ^3.0.2
+      vue-template-compiler: ^2.6.12
+      vue-template-es2015-compiler: ^1.9.0
+    peerDependenciesMeta:
+      '@svgr/core':
+        optional: true
+      '@vue/compiler-sfc':
+        optional: true
+      vue-template-compiler:
+        optional: true
+      vue-template-es2015-compiler:
+        optional: true
+    dependencies:
+      '@antfu/install-pkg': registry.npmmirror.com/@antfu/install-pkg/0.1.1
+      '@antfu/utils': registry.npmmirror.com/@antfu/utils/0.5.2
+      '@iconify/utils': registry.npmmirror.com/@iconify/utils/2.0.1
+      debug: registry.npmmirror.com/debug/4.3.4
+      kolorist: registry.npmmirror.com/kolorist/1.6.0
+      local-pkg: registry.npmmirror.com/local-pkg/0.4.2
+      unplugin: registry.npmmirror.com/unplugin/0.9.6
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/unplugin-vue-components/0.22.8_vue@3.2.40:
