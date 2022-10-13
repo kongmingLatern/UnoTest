@@ -3,7 +3,7 @@
     <div>
       <div flex="~" items-center>
         <div i-logos:vue mr-10 />
-        <span text-sm>信息查询平台</span>
+        <span text-lg>信息查询平台</span>
       </div>
     </div>
     <div @click="toggle()">
