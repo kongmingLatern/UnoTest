@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div text-center pt-10>
     <v-form-render :form-json="formJson" :form-data="formData" :option-data="optionData" ref="vFormRef"></v-form-render>
     <el-button type="primary" @click="submitForm">登录</el-button>
+    <el-button type="primary" @click="">注冊</el-button>
   </div>
 </template>
 
@@ -171,7 +172,15 @@ const submitForm = () => {
       JSON.stringify(formData)
     })
     .catch((error: string) => {
-      ElMessage.error(error)
+      ElMessage.error('输入信息有误，请重新输入')
+      vFormRef.value = null
     })
 }
 </script>
+
+<style  scoped>
+:deep(.static-content-item) {
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
