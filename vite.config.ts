@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 import Unocss from 'unocss/vite'
-import { presetAttributify, presetUno } from 'unocss'
+import { presetAttributify, presetUno, presetIcons } from 'unocss'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -17,6 +17,7 @@ export default defineConfig({
       presets: [
         presetAttributify(),
         presetUno(),
+        presetIcons({ scale: 1.2, warn: true })
       ],
       rules: [
         ['/^bg-(/\d+)$/', { background: '$1' }]
