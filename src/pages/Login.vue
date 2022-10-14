@@ -9,6 +9,7 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
+import router from '../router';
 
 const formJson = reactive({
   widgetList: [
@@ -170,6 +171,7 @@ const submitForm = () => {
     .then((formData: Record<string, any>) => {
       console.log(JSON.stringify(formData));
       JSON.stringify(formData)
+      router.push('/back')
     })
     .catch((error: string) => {
       ElMessage.error('输入信息有误，请重新输入')
