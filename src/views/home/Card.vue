@@ -27,19 +27,19 @@ const currentDate = ref(new Date())
   flex-wrap: unset;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 500px) {
   :deep(.el-col-24) {
     flex: 1 0 50%;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   :deep(.el-col-24) {
     flex: 1 0 33%;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 960px) {
   :deep(.el-col-24) {
     flex: 1 0 25%;
   }
