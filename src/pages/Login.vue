@@ -1,5 +1,7 @@
 <template>
+  <Header title="登录" text="返回首页" route="/" />
   <div text-center pt-10>
+    <div i-eva:arrow-ios-back-outline class="show"></div>
     <v-form-render :form-json="formJson" :form-data="formData" :option-data="optionData" ref="vFormRef"></v-form-render>
     <el-button type="primary" @click="submitForm">登录</el-button>
     <el-button type="primary" @click="">注冊</el-button>
@@ -9,6 +11,7 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
+import Header from '@/components/Header.vue'
 import router from '../router';
 
 const formJson = reactive({
@@ -184,5 +187,11 @@ const submitForm = () => {
 :deep(.static-content-item) {
   font-size: 20px;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .show {
+    display: none;
+  }
 }
 </style>
