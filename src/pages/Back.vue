@@ -1,11 +1,8 @@
 <template>
   <!-- 头部 -->
-  <Header />
-  <!-- 评论 -->
-  <Card />
+  <Header title="后台管理平台" text="退出登录" route="/login" />
 </template>
 
 <script lang="ts" setup>
-import Header from '@/views/back/Header.vue';
-import Card from '@/views/home/Card.vue'
+import Header from '@/components/Header.vue';
 </script>
