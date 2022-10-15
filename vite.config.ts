@@ -31,7 +31,8 @@ export default defineConfig({
         ['f-b-c', 'flex justify-between items-center'],
       ],
       rules: [
-        ['/^bg-(/\d+)$/', { background: '$1' }],
+        ['/^bg-(/d+)$/', { background: '$1' }],
+        // ['/^(min-|max-)?([wh])-?(.+)$/', { height: `${1 / 4}rem` }]
         // [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
         // [/^p-(\d+)$/, match => ({ padding: `${match[1] / 4}rem` })],
         [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `#${color}` })],
