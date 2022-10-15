@@ -5,6 +5,7 @@ import ElementPlus from 'element-plus'
 import 'uno.css'
 import './assets/css/style.css'
 import VForm3 from 'vform3-builds'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 
 import 'element-plus/dist/index.css'
 
