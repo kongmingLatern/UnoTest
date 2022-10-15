@@ -32,6 +32,8 @@ export default defineConfig({
       ],
       rules: [
         ['/^bg-(/\d+)$/', { background: '$1' }],
+        // [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
+        // [/^p-(\d+)$/, match => ({ padding: `${match[1] / 4}rem` })],
         [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `#${color}` })],
         ['card-shadow', { 'box-shadow': '0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017' }],
       ],
