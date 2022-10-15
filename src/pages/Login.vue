@@ -1,7 +1,7 @@
 <template>
   <Header title="登录" text="返回首页" route="/" />
   <div text-center pt-10>
-    <div i-eva:arrow-ios-back-outline class="show"></div>
+    <div i-eva:arrow-ios-back-outline class="show" @click="$router.go(-1)"></div>
     <v-form-render :form-json="formJson" :form-data="formData" :option-data="optionData" ref="vFormRef"></v-form-render>
     <el-button type="primary" @click="submitForm">登录</el-button>
     <el-button type="primary" @click="">注冊</el-button>
