@@ -27,7 +27,7 @@ const currentDate = ref(new Date())
   flex-wrap: unset;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 375px) {
   :deep(.el-col-24) {
     flex: 1 0 50%;
   }
