@@ -1,8 +1,21 @@
 <template>
   <div block text-center m="t-4">
-    <el-carousel trigger="click" h-200 sm="h-200" md="h-250" lg="h-300">
+    <el-carousel
+      trigger="click"
+      h-200
+      sm="h-200"
+      md="h-250"
+      lg="h-300"
+    >
       <el-carousel-item v-for="item in 4" :key="item">
-        <h3 class="small justify-center" text="2xl" lh-200 sm="lh-200" md="lh-250" lg="lh-300">
+        <h3
+          class="small justify-center"
+          text="2xl"
+          lh-200
+          sm="lh-200"
+          md="lh-250"
+          lg="lh-300"
+        >
           {{ item }}
         </h3>
       </el-carousel-item>

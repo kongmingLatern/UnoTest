@@ -1,5 +1,10 @@
 <template>
-  <el-form label-position="right" label-width="100px" :model="formLabelAlign" style="max-width: 460px">
+  <el-form
+    label-position="right"
+    label-width="100px"
+    :model="formLabelAlign"
+    style="max-width: 460px"
+  >
     <el-form-item label="Name">
       <el-input v-model="formLabelAlign.name" />
     </el-form-item>
@@ -12,8 +17,8 @@
   </el-form>
 </template>
 
-<script setup lang='ts'>
-import { reactive } from 'vue';
+<script setup lang="ts">
+import { reactive } from 'vue'
 
 const formLabelAlign = reactive({
   name: '',
@@ -22,6 +27,4 @@ const formLabelAlign = reactive({
 })
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

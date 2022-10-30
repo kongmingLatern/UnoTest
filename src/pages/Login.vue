@@ -1,9 +1,20 @@
 <template>
   <Header title="登录" text="返回首页" route="/" />
   <div text-center pt-10>
-    <div i-eva:arrow-ios-back-outline class="show" @click="$router.go(-1)"></div>
-    <v-form-render :form-json="formJson" :form-data="formData" :option-data="optionData" ref="vFormRef"></v-form-render>
-    <el-button type="primary" @click="submitForm">登录</el-button>
+    <div
+      i-eva:arrow-ios-back-outline
+      class="show"
+      @click="$router.go(-1)"
+    ></div>
+    <v-form-render
+      :form-json="formJson"
+      :form-data="formData"
+      :option-data="optionData"
+      ref="vFormRef"
+    ></v-form-render>
+    <el-button type="primary" @click="submitForm">
+      登录
+    </el-button>
     <el-button type="primary" @click="">注冊</el-button>
   </div>
 </template>
@@ -12,7 +23,7 @@
 import { ref, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
 import Header from '@/components/Header.vue'
-import router from '../router';
+import router from '../router'
 
 const formJson = reactive({
   widgetList: [
@@ -92,7 +103,8 @@ const formJson = reactive({
       options: {
         name: 'password',
         label: '密码',
-        type: 'password', columnWidth: '200px',
+        type: 'password',
+        columnWidth: '200px',
         labelHidden: false,
         readonly: false,
         placeholder: '请输入密码',
@@ -169,10 +181,10 @@ const optionData = reactive({})
 const vFormRef = ref(null)
 
 const submitForm = () => {
-  (vFormRef?.value as any)
+  ;(vFormRef?.value as any)
     .getFormData()
     .then((formData: Record<string, any>) => {
-      console.log(JSON.stringify(formData));
+      console.log(JSON.stringify(formData))
       JSON.stringify(formData)
       router.push('/back')
     })
@@ -183,7 +195,7 @@ const submitForm = () => {
 }
 </script>
 
-<style  scoped>
+<style scoped>
 :deep(.static-content-item) {
   font-size: 20px;
   font-weight: bold;
