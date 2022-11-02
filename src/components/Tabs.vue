@@ -1,10 +1,18 @@
 <template>
-  <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
-    <el-tab-pane v-for="item in tabs" :key="item" :name="item.name">
+  <el-tabs
+    v-model="activeName"
+    class="demo-tabs"
+    @tab-click="handleClick"
+  >
+    <el-tab-pane
+      v-for="item in tabs"
+      :key="item"
+      :name="item.name"
+    >
       <template #label>
-        {{ item.title}}
+        {{ item.title }}
       </template>
-      {{ item.name}}
+      {{ item.name }}
     </el-tab-pane>
   </el-tabs>
 </template>
@@ -20,7 +28,10 @@ const props = defineProps<{
 }>()
 const activeName = ref(props.tabs[0].name)
 
-const handleClick = (tab: TabsPaneContext, event: Event) => {
+const handleClick = (
+  tab: TabsPaneContext,
+  event: Event
+) => {
   // console.log(tab, event)
 }
 </script>
