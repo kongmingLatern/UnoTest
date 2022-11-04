@@ -11,6 +11,7 @@
 <script lang="ts" setup>
 import Header from '@/components/Header.vue'
 import Tabs from '@/components/Tabs.vue'
+import '../tabs.config'
 import { reactive } from 'vue'
 const tabs = reactive([
   {
@@ -22,4 +23,5 @@ const tabs = reactive([
     name: 'role',
   },
 ])
+// console.log(backConfig)
 </script>
