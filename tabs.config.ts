@@ -1,13 +1,4 @@
-type options = 'tab'
-
-type UserConfig = Array<Record<string, string>>
-
-type tabConfig = Record<options, UserConfig>
-
-
-declare function backConfig(config: tabConfig): tabConfig;
-
-
+import { backConfig } from './src/type/config/backconfig'
 export default backConfig({
   tab: [{
     title: '用户管理',
