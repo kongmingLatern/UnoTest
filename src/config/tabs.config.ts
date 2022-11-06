@@ -19,13 +19,8 @@ type UserExportConfig = UserConfig
 declare function backConfig(config: UserExportConfig): UserExportConfig;
 
 
-console.log(backConfig({
-  tab: [{
-    title: '用户管理',
-    name: 'user',
-  }, {
-    title: '角色管理',
-    name: 'role',
-  }]
-}));
+export default <T>(options: Partial<T>) => {
+  const config = backConfig(options)
+  return config
+}
 
