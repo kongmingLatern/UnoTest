@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import Header from '@/components/Header.vue'
 import Tabs from '@/components/Tabs.vue'
-import '../tabs.config'
+import '../config/tabs.config.config'
 import { reactive } from 'vue'
 const tabs = reactive([
   {
