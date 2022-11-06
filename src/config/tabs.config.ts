@@ -1,4 +1,3 @@
-
 export interface UserConfig {
   /**
    * @description: 选项卡配置
