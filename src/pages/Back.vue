@@ -11,17 +11,7 @@
 <script lang="ts" setup>
 import Header from '@/components/Header.vue'
 import Tabs from '@/components/Tabs.vue'
-import '../config/tabs.config.config'
 import { reactive } from 'vue'
-const tabs = reactive([
-  {
-    title: '用户管理',
-    name: 'user',
-  },
-  {
-    title: '角色管理',
-    name: 'role',
-  },
-])
-// console.log(backConfig)
+import { Config } from '@/config'
+const tabs = reactive(Config.tabs as any)
 </script>
