@@ -12,6 +12,19 @@ import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
+  build: {
+    minify: false,
+    rollupOptions: {
+      output: {
+        manualChunks: (id: string) => {
+          // 分包策略
+          if (id.includes('node_modules')) {
+            return "vendor"
+          }
+        }
+      }
+    }
+  },
   plugins: [
     vue(),
     Unocss({
