@@ -18,6 +18,7 @@ export default defineConfig({
       output: {
         manualChunks: (id: string) => {
           // 分包策略
+          // 如果包含 node_modules 的依赖，就单独打包
           if (id.includes('node_modules')) {
             return "vendor"
           }
